@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    color: #333333;
+}
+
+header {
+    position: relative; /* 子要素の基準点にするため */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../../imgs/after.png"),
+                      url("../../imgs/fv-bg.jpg");
+    max-height: 704px;
+    background-size: cover;
+    background-position: center;
+    padding-inline: clamp(20px, -131.46px + 40.38vw, 450px);
+    /* 375pxで40px、1440pxで272pxを維持しつつ可変 */
+    padding-block: clamp(40px, -41.69px + 21.78vw, 272px);
+    max-width: 540px;
+}
+
+.company {
+    font-weight: bold;
+    font-size: clamp(50px,5.56vw,80px);
+    line-height: 1.6;
+}
+
+.font {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.company_detail {
+    font-size: clamp(10px,1.39vw,20px);
+}
+
+.floating-card {
+    background-color: #FFFFFF;
+    max-width: 519px;
+    max-height: 241px;
+    padding-top: 36px;
+    padding-right: 112px;
+    padding-block: 36px;
+    padding-left: 36px;
+    margin-bottom: -100px;
+}
+
+.service {
+    font-size: clamp(10px,1.04vw,15px);
+    color: #999999;
+    line-height: 1.73;
+}
+
+.service_detail {
+    font-weight: bold;
+    font-size: clamp(20px,2.08vw,30px);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    
+}
