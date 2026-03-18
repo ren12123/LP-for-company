@@ -88,16 +88,31 @@ header {
 }
 
 @media (max-width: 768px) {
+
+    header {
+        text-align: center;
+        padding-bottom: 0;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+
     .floating-card {
         position: relative; 
-        transform: none;
+        left: auto;
+        bottom: 0;
+
+        transform: translateY(60%);
+        
         margin-inline: auto;
         width: 90%; 
-        max-width: none;
+        max-width: 300px;
+        
         /* ここを調整：-60pxで上に上げつつ、
-           下の要素（heroのテキスト）との距離をしっかり確保する */ 
+           下の要素（heroのテキスト）との距離をしっかり確保する */
+        margin-top: -60px; 
         margin-bottom: 0; /* 下マージンではなく、heroのpaddingで距離をとる */
-        padding: 24px;
+        
+        padding: 20px;
         text-align: center;
         box-sizing: border-box; /* 崩れ防止 */
         z-index: 10;
@@ -110,13 +125,15 @@ header {
            3. さらにカード自体の高さ（約130px〜）を考慮した余白が必要
         */
         padding-top: clamp(120px, 30vw, 180px); /* カードの下端からテキストが始まる距離 */
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
+        text-align: center; /* スマホでは中央寄せが見栄えが良いです */
     }
 
     .hero_content {
         /* テキストがカードの真裏に隠れないよう、明示的に位置を確保 */
         position: relative;
         z-index: 1;
+        margin-top: 10px;
     }
 }
