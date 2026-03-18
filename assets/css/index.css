@@ -11,18 +11,13 @@ html {
 
 header {
     position: relative; /* 子要素の基準点にするため */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-image: url("../../imgs/after.png"),
                       url("../../imgs/fv-bg.jpg");
-    max-height: 704px;
     background-size: cover;
     background-position: center;
     padding-inline: clamp(20px, -131.46px + 40.38vw, 450px);
     /* 375pxで40px、1440pxで272pxを維持しつつ可変 */
     padding-block: clamp(40px, -41.69px + 21.78vw, 272px);
-    max-width: 540px;
 }
 
 .company {
@@ -40,14 +35,18 @@ header {
 }
 
 .floating-card {
+    bottom: 0;
+    position: absolute;
     background-color: #FFFFFF;
-    max-width: 519px;
-    max-height: 241px;
-    padding-top: 36px;
-    padding-right: 112px;
-    padding-block: 36px;
-    padding-left: 36px;
-    margin-bottom: -100px;
+    transform: translateY(77.593361%);
+    left: clamp(20px, 53.26vw, 767px);
+    padding-right: clamp(12px, -23.22px + 9.39vw, 112px);
+    padding-block: clamp(24px, 2.5vw, 36px);
+    padding-left: clamp(15px, 2.5vw, 36px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .service {
@@ -60,8 +59,64 @@ header {
     font-weight: bold;
     font-size: clamp(20px,2.08vw,30px);
     line-height: 1.6;
+    padding-right: 13.39px;
+}
+
+.hero {
+    background-color: #EFEFEF;
+    padding-top: clamp(20px, 3.33vw, 48px);
+    padding-bottom: clamp(40px, 9.79vw, 141px);
+    padding-left: clamp(20px, 10.63vw, 153px);
+    padding-right: 20px;
+}
+
+.hero_content {
+    max-width: 560px;
+}
+
+.hero_text {
+    font-size: clamp(10px,1.04vw,15px);
+    line-height: 1.86;
+}
+
+.m-bottom-4 {
+    margin-bottom: clamp(2px, 0.28vw, 4px);
+}
+
+.m-bottom-19 {
+    margin-bottom: clamp(10px, 1.32vw, 19px);
 }
 
 @media (max-width: 768px) {
-    
+    .floating-card {
+        position: relative; 
+        transform: none;
+        margin-inline: auto;
+        width: 90%; 
+        max-width: none;
+        /* ここを調整：-60pxで上に上げつつ、
+           下の要素（heroのテキスト）との距離をしっかり確保する */ 
+        margin-bottom: 0; /* 下マージンではなく、heroのpaddingで距離をとる */
+        padding: 24px;
+        text-align: center;
+        box-sizing: border-box; /* 崩れ防止 */
+        z-index: 10;
+    }
+
+    .hero {
+        /* ここが重要：
+           1. カードが上に跨っている分 (60px) 
+           2. デザイン指示の余白 (48px)
+           3. さらにカード自体の高さ（約130px〜）を考慮した余白が必要
+        */
+        padding-top: clamp(120px, 30vw, 180px); /* カードの下端からテキストが始まる距離 */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero_content {
+        /* テキストがカードの真裏に隠れないよう、明示的に位置を確保 */
+        position: relative;
+        z-index: 1;
+    }
 }
