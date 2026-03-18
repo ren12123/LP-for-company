@@ -181,6 +181,19 @@ header {
     border: none;
 }
 
+.footer {
+    background-color: #999999;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 11px;
+    line-height: 1.82;
+    margin-top: clamp(15px,2.36vw,34px);
+    margin-bottom: clamp(15px,2.15vw,31px);
+}
+
 @media (max-width: 768px) {
 
     header {
