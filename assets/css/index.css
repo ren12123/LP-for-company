@@ -28,6 +28,7 @@ header {
 
 .font {
     font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
 }
 
 .company_detail {
@@ -87,6 +88,99 @@ header {
     margin-bottom: clamp(10px, 1.32vw, 19px);
 }
 
+.about {
+    display: flex;
+    justify-content: center;
+    padding-inline: 20px;
+}
+
+.about_content {
+    display: flex;
+    gap: clamp(15px,3.89vw,56px);
+    margin-block: clamp(20px,8.33vw,120px);
+    max-width: 932px;
+}
+
+.pc {
+    max-width: clamp(320px,25vw,360px);
+    max-height: 540px;
+}
+
+.tell-for-about {
+    max-width: 516px;
+    justify-content: center;
+}
+
+.abc {
+    margin-top: clamp(0px,3.4vw,49px);
+    font-size: clamp(35px,4.44vw,64px);
+    line-height: 1.61;
+    margin-bottom: clamp(8px, 6.67px + 0.37vw, 12px);
+    letter-spacing: 0.08em;
+}
+
+.strong {
+    display: block;
+    padding-bottom: clamp(24px, 16.33px + 2.13vw, 47px);
+}
+
+.about_detail {
+    font-size: clamp(12px,1.11vw,16px);
+}
+
+.camera {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_content {
+    max-width: 304px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* 基本的にすべて中央に寄せる */
+    text-align: center;
+    margin-top: clamp(30px,8.96vw,129px);
+    margin-bottom: clamp(30px,9.03vw,130px);
+}
+
+.font {
+    letter-spacing: 0.08em;
+}
+
+.main {
+    font-size: clamp(35px,4.44vw,64px);
+    line-height: 1.61;
+    margin-bottom: clamp(5px,0.76vw,11px);
+}
+
+.main_detail {
+    font-size: clamp(12px,1.04vw,15px);
+    line-height: 1.625;
+    align-self: flex-start; /* これだけ「中央寄せ」を無視して左端に寄せる */
+    text-align: left;
+    margin-bottom: clamp(16px,3.06vw,44px);
+}
+
+.move_btn {
+    font-size: 18px;
+    line-height: 1.61;
+    background-color: #6997C5;
+    color: #EFEFEF;
+    padding-inline: clamp(20px,3.96vw,57px);
+    padding-top: clamp(7px,0.972vw,14px);
+    padding-bottom: clamp(7px,1.04vw,15px);
+    border-radius: 50px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    border: none;
+}
+
 @media (max-width: 768px) {
 
     header {
@@ -101,7 +195,7 @@ header {
         left: auto;
         bottom: 0;
 
-        transform: translateY(60%);
+        transform: translateY(70%);
         
         margin-inline: auto;
         width: 90%; 
@@ -135,5 +229,14 @@ header {
         position: relative;
         z-index: 1;
         margin-top: 10px;
+    }
+
+    .about_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_detail {
+        align-self: center;
     }
 }
