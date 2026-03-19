@@ -181,6 +181,15 @@ header {
     border: none;
 }
 
+.move_btn:hover {
+    color: #007bff;
+}
+
+.move_btn:active {
+    color: #0056b3;
+    transform: translateY(1px);
+}
+
 .footer {
     background-color: #999999;
     display: flex;
