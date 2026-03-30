@@ -1,0 +1,12 @@
+@use "../foundation/variables" as v;
+
+.footer {
+    background-color: v.$color-text-sub;
+    display: flex;
+    justify-content: center;
+
+    &__logo {
+        font-size: 11px;
+        margin-block: clamp(15px, 2.36vw, 34px) clamp(15px, 2.15vw, 31px);
+    }
+}

@@ -1,0 +1,41 @@
+// 1. Foundation
+@use "foundation/variables";
+@use "foundation/base";
+
+// 2. Layout
+@use "layout/header";
+@use "layout/footer";
+
+// 3. Object (ここが object フォルダの中身を読み込む場所です)
+@use "object/hero";
+@use "object/about";
+@use "object/contact";
+
+// 4. Responsive (メディアクエリを最後に置く)
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+        padding-inline: 25px 15px;
+    }
+    .floating-card {
+        position: relative;
+        left: auto;
+        transform: translateY(70%);
+        margin: -60px auto 0;
+        width: 90%;
+        max-width: 300px;
+        z-index: 10;
+    }
+    .hero {
+        padding-top: clamp(120px, 30vw, 180px);
+        text-align: center;
+    }
+    .about__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact__detail {
+        align-self: center;
+        text-align: center;
+    }
+}

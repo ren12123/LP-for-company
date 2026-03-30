@@ -1,0 +1,30 @@
+.about {
+    display: flex;
+    justify-content: center;
+    padding-inline: 20px;
+
+    &__content {
+        display: flex;
+        gap: clamp(15px, 3.89vw, 56px);
+        margin-block: clamp(20px, 8.33vw, 120px);
+        max-width: 932px;
+    }
+
+    &__img {
+        max-width: clamp(320px, 25vw, 360px);
+        height: 540px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: clamp(35px, 4.44vw, 64px);
+        line-height: 1.61;
+        margin-bottom: clamp(8px, 6.67px + 0.37vw, 12px);
+    }
+}
+
+.camera {
+    max-width: 1440px;
+    width: 100%;
+    display: block;
+}

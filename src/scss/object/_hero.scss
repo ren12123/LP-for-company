@@ -1,0 +1,18 @@
+@use "../foundation/variables" as v;
+
+.hero {
+    background-color: v.$color-bg-light;
+    padding: clamp(20px, 3.33vw, 48px) 20px clamp(40px, 9.79vw, 141px) clamp(20px, 10.63vw, 153px);
+
+    &__content {
+        max-width: 560px;
+    }
+
+    &__text {
+        font-size: clamp(10px, 1.04vw, 15px);
+        line-height: 1.86;
+
+        &--m-bottom-4 { margin-bottom: clamp(2px, 0.28vw, 4px); }
+        &--m-bottom-19 { margin-bottom: clamp(10px, 1.32vw, 19px); }
+    }
+}

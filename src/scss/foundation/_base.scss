@@ -1,0 +1,20 @@
+@use "variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: $font-inter;
+    color: $color-text-main;
+}
+
+// 共通パーツ（金型）
+.font {
+    font-family: $font-serif;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}

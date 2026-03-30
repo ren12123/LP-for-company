@@ -1,0 +1,58 @@
+@use "../foundation/variables" as v;
+
+.contact {
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        max-width: 304px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: clamp(30px, 8.96vw, 129px);
+        margin-bottom: clamp(30px, 9.03vw, 130px);
+    }
+
+    &__title {
+        font-size: clamp(35px, 4.44vw, 64px);
+        line-height: 1.61;
+        margin-bottom: clamp(5px, 0.76vw, 11px);
+        // 変数を使わず元のCSS通り font クラスの継承を前提とするなら不要ですが、
+        // もし崩れているならここに font-family を追加します
+    }
+
+    &__detail {
+        font-size: clamp(12px, 1.04vw, 15px);
+        line-height: 1.625;
+        align-self: flex-start;
+        text-align: left;
+        margin-bottom: clamp(16px, 3.06vw, 44px);
+
+        p {
+            // HTML内の <p> タグに対する指定
+            line-height: 1.625;
+        }
+    }
+
+    &__btn {
+        font-size: 18px;
+        line-height: 1.61;
+        background-color: #6997C5; // 元のCSSのベタ打ち数値
+        color: #EFEFEF;
+        padding-inline: clamp(20px, 3.96vw, 57px);
+        padding-top: clamp(7px, 0.972vw, 14px);
+        padding-bottom: clamp(7px, 1.04vw, 15px);
+        border-radius: 50px;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: #EFEFEF;
+            color: #6997C5;
+            outline: 1px solid #6997C5;
+        }
+    }
+}

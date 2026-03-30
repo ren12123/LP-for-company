@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const formBtn = document.querySelector('.move_btn');
-    const contact_head = document.querySelector('.header');
+    // 修正済み：BEMクラス名 contact__btn を取得
+    const formBtn = document.querySelector('.contact__btn');
+    
+    // スクロール先のターゲット（header）
+    const targetHeader = document.querySelector('.header');
 
-    formBtn.addEventListener('click', () => {
-            contact_head.scrollIntoView({
+    if (formBtn && targetHeader) {
+        formBtn.addEventListener('click', () => {
+            targetHeader.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-    });
+        });
+    }
 });
