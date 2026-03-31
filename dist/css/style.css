@@ -16,6 +16,11 @@ html {
   letter-spacing: 0.08em;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   position: relative;
   background-image: url("../../imgs/after.png"), url("../../imgs/fv-bg.jpg");

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+HarunoUmi&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="./src/scss/style.scss">
 </head>
 
 <body>
@@ -21,8 +21,10 @@
         </div>
 
         <div class="floating-card">
-            <p class="floating-card__service">私たちのサービス</p>
-            <h2 class="floating-card__detail">時間と場所に囚われない<br>顧客に寄り添った柔軟な<br>コンサルティングサービス</h2>
+            <div class="floating-card__content">
+                <p class="floating-card__service">私たちのサービス</p>
+                <h2 class="floating-card__detail">時間と場所に囚われない<br>顧客に寄り添った柔軟な<br>コンサルティングサービス</h2>
+            </div>
         </div>
     </header>
 
@@ -37,7 +39,7 @@
 
         <section class="about">
             <div class="about__content">
-                <img class="about__img" src="./imgs/about-content.jpg" alt="pc">
+                <img class="about__img" src="/imgs/about-content.jpg" alt="pc">
 
                 <div class="about__info">
                     <h2 class="font about__title">about</h2>
@@ -54,7 +56,7 @@
             </div>
         </section>
 
-        <img class="camera" src="./imgs/IMAGE.jpg" alt="camera">
+        <img class="camera" src="/imgs/IMAGE.jpg" alt="camera">
     </main>
 
     <section class="contact">
@@ -73,6 +75,6 @@
         <p class="footer__logo">© 2022 traveler20.</p>
     </footer>
 
-    <script src="./assets/style.js"></script>
+    <script type="module" src="./src/ts/style.ts"></script>
 </body>
 </html>

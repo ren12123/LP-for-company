@@ -2,16 +2,28 @@
 
 .header {
     position: relative;
-    background-image: url("../../imgs/after.png"), url("../../imgs/fv-bg.jpg");
+    background-image: url("/imgs/after.png"), url("/imgs/fv-bg.jpg");
     background-size: cover;
     background-position: center;
     padding-inline: clamp(20px, -131.46px + 40.38vw, 450px);
     padding-block: clamp(40px, -41.69px + 21.78vw, 272px);
+    display: flex;
+    flex-direction: column; // 縦に並べる
+    justify-content: center;
 
+
+    &__content {
+        display: flex;
+        flex-direction: column; // 縦に並べる
+        justify-content: center; // 上下の中央
+        text-align: left;
+        max-width: 540px;
+    }
+    
     &__title {
         font-weight: bold;
         font-size: clamp(50px, 5.56vw, 80px);
-        height: 128px;
+        line-height: 1.56;
     }
 
     &__detail {
@@ -21,22 +33,23 @@
 }
 
 .floating-card {
+    background-color: v.$color-white;
+    width: clamp(120px,36.42vw,519px);
+    padding: 16px;
     position: absolute;
     bottom: 0;
-    left: clamp(20px, 53.26vw, 767px);
-    background-color: v.$color-white;
+    right: 10.69%;
     transform: translateY(77.59%);
-    padding: clamp(24px, 2.5vw, 36px) clamp(12px, -23.22px + 9.39vw, 112px) clamp(24px, 2.5vw, 36px) clamp(15px, 2.5vw, 36px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 519px;
-    width: 100%;
+
+    &__content {
+        margin-block: 20px;
+        margin-left: 20px;
+    }
 
     &__service {
         font-size: clamp(10px, 1.04vw, 15px);
         color: v.$color-text-sub;
-        line-height: 1.73;
+        line-height: 1.67;
     }
 
     &__detail {
