@@ -22,7 +22,7 @@
     
     &__title {
         font-weight: bold;
-        font-size: clamp(50px, 5.56vw, 80px);
+        font-size: clamp(40px, 5.56vw, 80px);
         line-height: 1.56;
     }
 
@@ -35,7 +35,7 @@
 .floating-card {
     background-color: v.$color-white;
     width: clamp(120px,36.42vw,519px);
-    padding: 16px;
+    padding: clamp(8px,1.11vw,16px);
     position: absolute;
     bottom: 0;
     right: 10.69%;

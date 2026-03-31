@@ -14,21 +14,24 @@
 // 4. Responsive (メディアクエリを最後に置く)
 @media (max-width: 768px) {
     .header {
-        text-align: center;
-        padding-inline: 25px 15px;
+        &__content {
+            text-align: center;
+        }
     }
     .floating-card {
-        position: relative;
-        left: auto;
-        transform: translateY(70%);
-        margin: -60px auto 0;
-        width: 90%;
-        max-width: 300px;
-        z-index: 10;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(70%);
+        width: 70%;
+        max-width: 200px;
+
+        &__content {
+            margin: 0;
+        }
     }
     .hero {
-        padding-top: clamp(120px, 30vw, 180px);
         text-align: center;
+        padding-top: 100px;
     }
     .about__content {
         flex-direction: column;
