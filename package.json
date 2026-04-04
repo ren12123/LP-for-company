@@ -1,12 +1,21 @@
 {
   "name": "lp-for-company",
+  "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "Company Landing Page implemented with Vite, TypeScript, and SCSS (BEM).",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "keywords": [
+    "typescript",
+    "scss",
+    "bem",
+    "vite"
+  ],
+  "author": "Your Name",
   "devDependencies": {
     "sass": "^1.98.0",
     "typescript": "^6.0.2",
